@@ -2,6 +2,8 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 // import axios from "axios";
 import * as API from "./../../api";
 
+const POSTS_SLICE_NAME = "posts";
+
 const initialState = {
   // posts: [
   //   {
@@ -29,7 +31,8 @@ const initialState = {
 
 // action creator
 export const getPostsThunk = createAsyncThunk(
-  "posts/getPosts",
+  // "posts/getPosts",
+  `${POSTS_SLICE_NAME}/getPosts`,
   async (payload, thunkAPI) => {
     try {
       // const { data } = await httpClient.get("/posts");
@@ -47,7 +50,8 @@ export const getPostsThunk = createAsyncThunk(
 
 const postsSlice = createSlice({
   initialState,
-  name: "posts",
+  // name: "posts",
+  name: POSTS_SLICE_NAME,
   // (state,action)=>{}
   reducers: {},
   extraReducers: (builder) => {
