@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
-import axios from "axios";
+// import axios from "axios";
 import "./reset.css";
 import "./index.css";
 import App from "./App.jsx";
@@ -39,24 +39,24 @@ createRoot(document.getElementById("root")).render(
 
 // get, post, patch/put, delete
 
-const httpClient = axios.create({
-  baseURL: "https://jsonplaceholder.typicode.com",
-});
+// const httpClient = axios.create({
+//   baseURL: "https://jsonplaceholder.typicode.com",
+// });
 
 // 'https://jsonplaceholder.typicode.com/posts'
-try {
-  const response = await httpClient.get("/posts/100");
-  console.log(response.data);
-} catch (err) {
-  console.log(err);
-}
+// try {
+//   const response = await httpClient.get("/posts/100");
+//   console.log(response.data);
+// } catch (err) {
+//   console.log(err);
+// }
 
-httpClient
-  .get("/posts")
-  .then((response) => console.log(response.data))
-  .catch((err) => console.log(err));
+// httpClient
+//   .get("/posts")
+//   .then((response) => console.log(response.data))
+//   .catch((err) => console.log(err));
 
-httpClient
-  .get("/users")
-  .then((response) => console.log(response.data))
-  .catch((err) => console.log(err));
+// httpClient
+//   .get("/users")
+//   .then((response) => console.log(response.data))
+//   .catch((err) => console.log(err));
